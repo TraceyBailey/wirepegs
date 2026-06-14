@@ -11,7 +11,7 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title} | Wire Pegs</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/wire-pegs-favicon.svg" />
   </head>
   <body class="bg-navy-50 text-navy-900">
 
@@ -19,7 +19,7 @@ const { title, description } = Astro.props;
     <header class="bg-navy-50 border-b border-navy-100 sticky top-0 z-50">
       <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         <a href="/">
-          <img src="/Wire_Pegs_Logo.png" alt="Wire Pegs" class="h-20 w-auto" />
+          <img src="/wire-pegs-blue.png" alt="Wire Pegs" class="h-20 w-auto" />
         </a>
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-navy-800">
           <a href="/why-wire-pegs" class="hover:text-teal-500 transition-colors">Why Wire Pegs</a>
@@ -27,8 +27,26 @@ const { title, description } = Astro.props;
           <a href="/which-peg" class="hover:text-teal-500 transition-colors">Peg Finder</a>
           <a href="/blog" class="hover:text-teal-500 transition-colors">Blog</a>
           <a href="/about" class="hover:text-teal-500 transition-colors">About</a>
+          <a href="/contact" class="hover:text-teal-500 transition-colors">Contact</a>
         </nav>
-        <a href="https://www.biome.com.au/collections/wire-pegs" target="_blank" class="bg-teal-500 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-teal-700 transition-colors">Buy at Biome →</a>
+        <div class="flex items-center gap-4">
+          <a href="https://www.biome.com.au/collections/wire-pegs" target="_blank" class="hidden md:inline-block bg-teal-500 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-teal-700 transition-colors">Buy at Biome →</a>
+          <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+            <span class="block w-6 h-0.5 bg-navy-900"></span>
+            <span class="block w-6 h-0.5 bg-navy-900"></span>
+            <span class="block w-6 h-0.5 bg-navy-900"></span>
+          </button>
+        </div>
+      </div>
+      <!-- MOBILE MENU -->
+      <div id="mobile-menu" class="hidden bg-navy-50 border-t border-navy-100 px-6 py-6 flex-col gap-4">
+        <a href="/why-wire-pegs" class="text-navy-800 font-medium hover:text-teal-500 transition-colors">Why Wire Pegs</a>
+        <a href="/products" class="text-navy-800 font-medium hover:text-teal-500 transition-colors">Products</a>
+        <a href="/which-peg" class="text-navy-800 font-medium hover:text-teal-500 transition-colors">Peg Finder</a>
+        <a href="/blog" class="text-navy-800 font-medium hover:text-teal-500 transition-colors">Blog</a>
+        <a href="/about" class="text-navy-800 font-medium hover:text-teal-500 transition-colors">About</a>
+        <a href="/contact" class="text-navy-800 font-medium hover:text-teal-500 transition-colors">Contact</a>
+        <a href="https://www.biome.com.au/collections/wire-pegs" target="_blank" class="bg-teal-500 text-white text-sm font-semibold px-5 py-3 rounded-full hover:bg-teal-700 transition-colors text-center">Buy at Biome →</a>
       </div>
     </header>
 
@@ -38,33 +56,42 @@ const { title, description } = Astro.props;
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-navy-900 text-navy-100 mt-24">
+    <footer class="bg-slate-100 text-navy-900 mt-24 border-t border-slate-200">
       <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
-          <img src="/Wire_Pegs_Logo.png" alt="Wire Pegs" class="h-16 w-auto mb-4 opacity-90" />
-          <p class="text-sm leading-relaxed text-navy-400">The original Australian stainless steel wire clothes peg. Built to last a lifetime.</p>
+          <img src="/Wire_Pegs_Logo.png" alt="Wire Pegs" class="h-16 w-auto mb-4" />
+          <p class="text-sm leading-relaxed text-navy-600">The original Australian stainless steel wire clothes peg. Built to last a lifetime.</p>
         </div>
         <div>
-          <h3 class="text-white font-semibold text-xs uppercase tracking-wider mb-4">Pages</h3>
+          <h3 class="text-navy-900 font-semibold text-xs uppercase tracking-wider mb-4">Pages</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="/why-wire-pegs" class="text-navy-400 hover:text-teal-300 transition-colors">Why Wire Pegs</a></li>
-            <li><a href="/products" class="text-navy-400 hover:text-teal-300 transition-colors">Products</a></li>
-            <li><a href="/which-peg" class="text-navy-400 hover:text-teal-300 transition-colors">Peg Finder</a></li>
-            <li><a href="/blog" class="text-navy-400 hover:text-teal-300 transition-colors">Blog</a></li>
-            <li><a href="/about" class="text-navy-400 hover:text-teal-300 transition-colors">About</a></li>
-            <li><a href="/contact#wholesale" class="text-navy-400 hover:text-teal-300 transition-colors">Sell Wire Pegs</a></li>
+            <li><a href="/why-wire-pegs" class="text-navy-600 hover:text-teal-500 transition-colors">Why Wire Pegs</a></li>
+            <li><a href="/products" class="text-navy-600 hover:text-teal-500 transition-colors">Products</a></li>
+            <li><a href="/which-peg" class="text-navy-600 hover:text-teal-500 transition-colors">Peg Finder</a></li>
+            <li><a href="/blog" class="text-navy-600 hover:text-teal-500 transition-colors">Blog</a></li>
+            <li><a href="/about" class="text-navy-600 hover:text-teal-500 transition-colors">About</a></li>
+            <li><a href="/contact#wholesale" class="text-navy-600 hover:text-teal-500 transition-colors">Sell Wire Pegs</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-white font-semibold text-xs uppercase tracking-wider mb-4">Buy Wire Pegs</h3>
-          <p class="text-sm mb-4 text-navy-400">Wire Pegs are available exclusively through Biome — Australia's leading eco store.</p>
+          <h3 class="text-navy-900 font-semibold text-xs uppercase tracking-wider mb-4">Buy Wire Pegs</h3>
+          <p class="text-sm mb-4 text-navy-600">Wire Pegs are available exclusively through Biome — Australia's leading eco store.</p>
           <a href="https://www.biome.com.au/collections/wire-pegs" target="_blank" class="inline-block bg-teal-500 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-teal-700 transition-colors">Shop at Biome →</a>
         </div>
       </div>
-      <div class="border-t border-navy-800 py-6 text-center text-xs text-navy-400">
+      <div class="border-t border-slate-200 py-6 text-center text-xs text-navy-400">
         © 2025 Wire Pegs. All rights reserved.
       </div>
     </footer>
+
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      toggle?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+        menu?.classList.toggle('flex');
+      });
+    </script>
 
   </body>
 </html>

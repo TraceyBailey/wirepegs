@@ -8,20 +8,18 @@ import Layout from '../layouts/Layout.astro';
 >
 
   <!-- HERO -->
-  <section class="bg-navy-50 py-24 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-sm font-semibold uppercase tracking-widest text-teal-500 mb-4">Australian Made · Since 2015</p>
-      <h1 class="text-5xl md:text-6xl font-bold text-navy-900 leading-tight mb-6">The Last Pegs<br/>You'll Ever Buy</h1>
-      <p class="text-xl text-navy-600 max-w-2xl mx-auto mb-10">Stainless steel wire clothes pegs that never rust, never break, and never need replacing. No plastic. No springs. No compromise.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://www.biome.com.au/collections/wire-pegs" target="_blank" class="bg-teal-500 text-white font-semibold px-8 py-4 rounded-full hover:bg-teal-700 transition-colors text-lg">Shop at Biome →</a>
-        <a href="/which-peg" class="bg-white text-navy-900 font-semibold px-8 py-4 rounded-full border border-navy-100 hover:border-navy-400 transition-colors text-lg">Find My Peg</a>
-      </div>
+  <section class="relative min-h-96 flex items-center justify-center overflow-hidden">
+    <img src="/images/Wire-Pegs-Backyard-Ocean.jpg" alt="Wire Pegs on a sunny Australian clothesline" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-navy-900 opacity-40"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center px-6 py-24">
+      <p class="text-sm font-semibold uppercase tracking-widest text-teal-300 mb-4">Australian Owned · Since 2015</p>
+      <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">The Last Pegs<br/>You'll Ever Buy</h1>
+      <p class="text-xl text-navy-50 max-w-2xl mx-auto">Stainless steel wire clothes pegs that never rust, never break, and never need replacing. No plastic. No springs. No compromise.</p>
     </div>
   </section>
 
   <!-- TRUST BAR -->
-  <section class="bg-navy-900 py-5 px-6">
+  <section class="bg-navy-900 py-4 px-6">
     <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-8">
       <span class="text-teal-300 text-sm font-medium">✦ Since 2015</span>
       <span class="text-teal-300 text-sm font-medium">✦ 4,000+ happy customers</span>
@@ -32,9 +30,9 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- WHY WIRE PEGS -->
-  <section class="py-24 px-6 bg-white">
+  <section class="py-16 px-6 bg-white">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
+      <div class="text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Why stainless steel?</h2>
         <p class="text-lg text-navy-600 max-w-2xl mx-auto">Plastic pegs break. Wooden pegs rot. Wire pegs last forever.</p>
       </div>
@@ -55,70 +53,93 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-navy-600 leading-relaxed">Buy once, use forever. Wire Pegs outlast hundreds of plastic pegs and save you money over time.</p>
         </div>
       </div>
-      <div class="text-center mt-10">
+      <div class="text-center mt-8">
         <a href="/why-wire-pegs" class="text-teal-500 font-medium hover:text-teal-700 transition-colors underline underline-offset-4">Read the full story →</a>
       </div>
     </div>
   </section>
 
-  <!-- CHOOSE YOUR GRADE -->
-  <section class="bg-navy-50 py-24 px-6">
+  <!-- CHOOSE YOUR GRADE + PEG FINDER -->
+  <section class="bg-navy-50 py-16 px-6">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
+      <div class="text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Choose your grade</h2>
         <p class="text-lg text-navy-600 max-w-2xl mx-auto">Not all stainless steel is equal. The right grade depends on where you live and how you use your pegs.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl border-2 border-navy-100 p-8">
-          <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">Grade 201</p>
-          <h3 class="text-2xl font-bold text-navy-900 mb-3">Standard</h3>
-          <p class="text-navy-600 mb-6 leading-relaxed">Best for indoor use or if you bring your pegs in after washing. Not suitable for coastal areas.</p>
-          <a href="/products/grade-201" class="text-sm font-semibold text-teal-500 hover:text-teal-700 underline underline-offset-4">Learn more →</a>
+        <div class="relative rounded-2xl overflow-hidden min-h-80 flex flex-col justify-end">
+          <img src="/images/balcony-201.jpg" alt="Balcony setting for Grade 201 pegs" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/60 to-transparent"></div>
+          <div class="relative z-10 p-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-teal-300 mb-2">Grade 201</p>
+            <h3 class="text-2xl font-bold text-white mb-3">Standard</h3>
+            <p class="text-navy-100 mb-6 leading-relaxed text-sm">Best for indoor use or if you bring your pegs in after washing. Not suitable for coastal areas.</p>
+            <a href="/products/grade-201" class="text-sm font-semibold text-teal-300 hover:text-white underline underline-offset-4">Learn more →</a>
+          </div>
         </div>
-        <div class="bg-white rounded-2xl border-2 border-teal-500 p-8">
-          <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">Grade 304</p>
-          <h3 class="text-2xl font-bold text-navy-900 mb-3">Medium</h3>
-          <p class="text-navy-600 mb-6 leading-relaxed">Suitable for leaving outdoors in most Australian conditions. Keep away from coastal environments.</p>
-          <a href="/products/grade-304" class="text-sm font-semibold text-teal-500 hover:text-teal-700 underline underline-offset-4">Learn more →</a>
+        <div class="relative rounded-2xl overflow-hidden min-h-80 flex flex-col justify-end">
+          <img src="/images/backyard-304.jpg" alt="Backyard setting for Grade 304 pegs" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/60 to-transparent"></div>
+          <div class="relative z-10 p-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-teal-300 mb-2">Grade 304</p>
+            <h3 class="text-2xl font-bold text-white mb-3">Medium</h3>
+            <p class="text-navy-100 mb-6 leading-relaxed text-sm">Suitable for leaving outdoors in most Australian conditions. Keep away from coastal environments.</p>
+            <a href="/products/grade-304" class="text-sm font-semibold text-teal-300 hover:text-white underline underline-offset-4">Learn more →</a>
+          </div>
         </div>
-        <div class="bg-navy-900 rounded-2xl border-2 border-navy-900 p-8">
-          <p class="text-xs font-bold uppercase tracking-widest text-teal-300 mb-2">Grade 316</p>
-          <h3 class="text-2xl font-bold text-white mb-3">Marine Grade</h3>
-          <p class="text-navy-100 mb-6 leading-relaxed">The toughest option. Perfect for coastal homes, boats, and harsh outdoor conditions. Will never rust.</p>
-          <a href="/products/grade-316" class="text-sm font-semibold text-teal-300 hover:text-teal-100 underline underline-offset-4">Learn more →</a>
+        <div class="relative rounded-2xl overflow-hidden min-h-80 flex flex-col justify-end">
+          <img src="/images/coast-316.jpg" alt="Coastal setting for Grade 316 marine pegs" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/60 to-transparent"></div>
+          <div class="relative z-10 p-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-teal-300 mb-2">Grade 316</p>
+            <h3 class="text-2xl font-bold text-white mb-3">Marine Grade</h3>
+            <p class="text-navy-100 mb-6 leading-relaxed text-sm">The toughest option. Perfect for coastal homes, boats, and harsh outdoor conditions. Will never rust.</p>
+            <a href="/products/grade-316" class="text-sm font-semibold text-teal-300 hover:text-white underline underline-offset-4">Learn more →</a>
+          </div>
         </div>
       </div>
-      <div class="text-center mt-10">
-        <a href="/which-peg" class="bg-teal-500 text-white font-semibold px-8 py-4 rounded-full hover:bg-teal-700 transition-colors">Not sure? Use the Peg Finder →</a>
+
+      <!-- PEG FINDER CTA -->
+      <div class="flex justify-center mt-10">
+        <div class="rounded-2xl bg-white border-4 border-navy-100 px-10 py-10 w-full md:w-2/3 lg:w-1/2">
+          <div class="flex flex-col items-center text-center gap-4">
+            <img src="/images/Peg-Finder.png" alt="Wire Peg illustration" class="h-36 w-auto" />
+            <p class="text-xs font-bold uppercase tracking-widest text-teal-500">Quick Tool</p>
+            <h3 class="text-2xl md:text-3xl font-bold text-navy-900">Not sure which peg is right for you?</h3>
+            <p class="text-navy-600 leading-relaxed">Answer 3 quick questions and we'll recommend the perfect grade for your home, location, and lifestyle.</p>
+            <a href="/which-peg" class="inline-block bg-teal-500 text-white font-semibold px-8 py-4 rounded-full hover:bg-teal-700 transition-colors mt-2">Find My Peg →</a>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
   <!-- CUSTOMER QUOTES -->
-  <section class="py-24 px-6 bg-white">
+  <section class="py-16 px-6 bg-white">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
+      <div class="text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-4">What customers say</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-navy-50 rounded-2xl p-8 border border-navy-100">
           <p class="text-navy-600 leading-relaxed mb-6">"Great long lasting product. In our house they also double up as small clamps and food bag closers."</p>
-          <p class="text-sm font-semibold text-navy-900">— Rebecca C.</p>
+          <p class="text-sm font-semibold text-navy-900">— Rebecca</p>
         </div>
         <div class="bg-navy-50 rounded-2xl p-8 border border-navy-100">
-          <p class="text-navy-600 leading-relaxed mb-6">"They're still plenty secure on the line and nice and easy on my mum's arthritic thumbs."</p>
-          <p class="text-sm font-semibold text-navy-900">— Talara</p>
+          <p class="text-navy-600 leading-relaxed mb-6">"Will be buying more! These are perfectly functional and we'll be using them to replace all our plastic pegs as they break."</p>
+          <p class="text-sm font-semibold text-navy-900">— Patricia</p>
         </div>
         <div class="bg-navy-50 rounded-2xl p-8 border border-navy-100">
-          <p class="text-navy-600 leading-relaxed mb-6">"I'll never go back to plastic pegs. These have survived years outdoors and still look brand new."</p>
-          <p class="text-sm font-semibold text-navy-900">— Wire Pegs customer</p>
+          <p class="text-navy-600 leading-relaxed mb-6">"There's no going back to plastic hangers with these. They are sturdy, easy to use, and last a very long time. Best of all, no more broken pieces of plastic."</p>
+          <p class="text-sm font-semibold text-navy-900">— Jeryn</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FINAL CTA -->
-  <section class="bg-navy-900 text-white py-24 px-6">
+  <section class="bg-navy-900 text-white py-16 px-6">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to buy your last pegs ever?</h2>
       <p class="text-navy-100 text-lg mb-10">Wire Pegs are available exclusively through Biome — Australia's leading eco store.</p>
