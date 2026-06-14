@@ -6,32 +6,28 @@ const { frontmatter } = Astro.props;
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
 
-  <!-- HERO -->
-  <section class="py-24 px-6 bg-stone-50">
+  <section class="py-24 px-6 bg-navy-50">
     <div class="max-w-3xl mx-auto">
-      <a href="/blog" class="text-sm font-medium text-stone-400 hover:text-stone-600 transition-colors mb-8 inline-block">← Back to Blog</a>
-      <p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">{frontmatter.category}</p>
-      <h1 class="text-4xl md:text-5xl font-bold text-stone-800 leading-tight mb-6">{frontmatter.title}</h1>
-      <p class="text-xl text-stone-500 leading-relaxed mb-6">{frontmatter.description}</p>
-      <p class="text-sm text-stone-400">
+      <a href="/blog" class="text-sm font-medium text-teal-500 hover:text-teal-700 transition-colors mb-8 inline-block">← Back to Blog</a>
+      <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-4">{frontmatter.category}</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-navy-900 leading-tight mb-6">{frontmatter.title}</h1>
+      <p class="text-xl text-navy-600 leading-relaxed mb-6">{frontmatter.description}</p>
+      <p class="text-sm text-navy-400">
         {new Date(frontmatter.date).toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}
       </p>
     </div>
   </section>
 
-  <!-- CONTENT -->
-  <section class="py-16 px-6">
-    <div class="max-w-3xl mx-auto prose prose-stone prose-lg
-      prose-headings:font-bold prose-headings:text-stone-800
-      prose-p:text-stone-600 prose-p:leading-relaxed
-      prose-a:text-stone-800 prose-a:font-medium prose-a:underline prose-a:underline-offset-4
-      prose-strong:text-stone-800
-      prose-ul:text-stone-600
-      prose-li:text-stone-600">
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-3xl mx-auto prose prose-lg
+      prose-headings:text-navy-900 prose-headings:font-bold
+      prose-p:text-navy-600 prose-p:leading-relaxed
+      prose-a:text-teal-500 prose-a:font-medium prose-a:no-underline hover:prose-a:text-teal-700
+      prose-strong:text-navy-900
+      prose-ul:text-navy-600
+      prose-li:text-navy-600">
       <slot />
     </div>
   </section>
-
-
 
 </Layout>
