@@ -1,17 +1,129 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="The Last Pegs You'll Ever Buy"
+  description="Wire Pegs are Australian stainless steel wire clothes pegs that never rust, never break, and last a lifetime. Shop online at Biome."
+>
+
+  <!-- HERO -->
+  <section class="bg-stone-50 py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-sm font-semibold uppercase tracking-widest text-stone-400 mb-4">Australian Made · Since 2015</p>
+      <h1 class="text-5xl md:text-6xl font-bold text-stone-800 leading-tight mb-6">The Last Pegs You'll Ever Buy</h1>
+      <p class="text-xl text-stone-500 max-w-2xl mx-auto mb-10">Stainless steel wire clothes pegs that never rust, never break, and never need replacing. No plastic. No springs. No compromise.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://www.biome.com.au/collections/wire-pegs" target="_blank" class="bg-stone-800 text-white font-semibold px-8 py-4 rounded-full hover:bg-stone-700 transition-colors text-lg">Shop at Biome →</a>
+        <a href="/which-peg" class="bg-white text-stone-800 font-semibold px-8 py-4 rounded-full border border-stone-300 hover:border-stone-500 transition-colors text-lg">Find My Peg</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="bg-stone-800 text-white py-6 px-6">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-8 text-sm font-medium text-stone-300">
+      <span>✦ Since 2015</span>
+      <span>✦ 4,000+ happy customers</span>
+      <span>✦ Made from one piece of wire</span>
+      <span>✦ Three grades of stainless steel</span>
+      <span>✦ Designed in Australia</span>
+    </div>
+  </section>
+
+  <!-- WHY WIRE PEGS -->
+  <section class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-4">Why stainless steel?</h2>
+        <p class="text-lg text-stone-500 max-w-2xl mx-auto">Plastic pegs break. Wooden pegs rot. Wire pegs last forever.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 border border-stone-100">
+          <div class="text-3xl mb-4">🔩</div>
+          <h3 class="text-xl font-bold text-stone-800 mb-3">Never Breaks</h3>
+          <p class="text-stone-500 leading-relaxed">Made from a single piece of wire with no spring mechanism — there is nothing to snap, crack, or fall apart.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-stone-100">
+          <div class="text-3xl mb-4">🛡️</div>
+          <h3 class="text-xl font-bold text-stone-800 mb-3">Rust Resistant</h3>
+          <p class="text-stone-500 leading-relaxed">Choose the right grade for your conditions — from everyday indoor use to harsh coastal marine environments.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-stone-100">
+          <div class="text-3xl mb-4">♾️</div>
+          <h3 class="text-xl font-bold text-stone-800 mb-3">Lasts Decades</h3>
+          <p class="text-stone-500 leading-relaxed">Buy once, use forever. Wire Pegs outlast hundreds of plastic pegs and save you money over time.</p>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="/why-wire-pegs" class="text-stone-600 font-medium hover:text-stone-900 transition-colors underline underline-offset-4">Read the full story →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHOOSE YOUR GRADE -->
+  <section class="bg-white py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-4">Choose your grade</h2>
+        <p class="text-lg text-stone-500 max-w-2xl mx-auto">Not all stainless steel is equal. The right grade depends on where you live and how you use your pegs.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border-2 border-stone-200 p-8">
+          <p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-2">Grade 201</p>
+          <h3 class="text-2xl font-bold text-stone-800 mb-3">Standard</h3>
+          <p class="text-stone-500 mb-6 leading-relaxed">Best for indoor use or if you bring your pegs in after washing. Not suitable for coastal areas.</p>
+          <a href="/products/grade-201" class="text-sm font-semibold text-stone-700 hover:text-stone-900 underline underline-offset-4">Learn more →</a>
+        </div>
+        <div class="rounded-2xl border-2 border-stone-400 p-8 bg-stone-50">
+          <p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-2">Grade 304</p>
+          <h3 class="text-2xl font-bold text-stone-800 mb-3">Medium</h3>
+          <p class="text-stone-500 mb-6 leading-relaxed">Suitable for leaving outdoors in most Australian conditions. Keep away from coastal environments.</p>
+          <a href="/products/grade-304" class="text-sm font-semibold text-stone-700 hover:text-stone-900 underline underline-offset-4">Learn more →</a>
+        </div>
+        <div class="rounded-2xl border-2 border-stone-800 p-8 bg-stone-800">
+          <p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-2">Grade 316</p>
+          <h3 class="text-2xl font-bold text-white mb-3">Marine Grade</h3>
+          <p class="text-stone-300 mb-6 leading-relaxed">The toughest option. Perfect for coastal homes, boats, and harsh outdoor conditions. Will never rust.</p>
+          <a href="/products/grade-316" class="text-sm font-semibold text-stone-300 hover:text-white underline underline-offset-4">Learn more →</a>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="/which-peg" class="bg-stone-800 text-white font-semibold px-8 py-4 rounded-full hover:bg-stone-700 transition-colors">Not sure? Use the Peg Finder →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER QUOTES -->
+  <section class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-4">What customers say</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-8 border border-stone-100">
+          <p class="text-stone-600 leading-relaxed mb-6">"Great long lasting product. In our house they also double up as small clamps and food bag closers."</p>
+          <p class="text-sm font-semibold text-stone-800">— Rebecca C.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-stone-100">
+          <p class="text-stone-600 leading-relaxed mb-6">"They're still plenty secure on the line and nice and easy on my mum's arthritic thumbs."</p>
+          <p class="text-sm font-semibold text-stone-800">— Talara</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-stone-100">
+          <p class="text-stone-600 leading-relaxed mb-6">"I'll never go back to plastic pegs. These have survived years outdoors and still look brand new."</p>
+          <p class="text-sm font-semibold text-stone-800">— Wire Pegs customer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="bg-stone-800 text-white py-24 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to buy your last pegs ever?</h2>
+      <p class="text-stone-300 text-lg mb-10">Wire Pegs are available exclusively through Biome — Australia's leading eco store.</p>
+      <a href="https://www.biome.com.au/collections/wire-pegs" target="_blank" class="bg-white text-stone-800 font-semibold px-10 py-4 rounded-full hover:bg-stone-100 transition-colors text-lg">Shop Wire Pegs at Biome →</a>
+    </div>
+  </section>
+
+</Layout>

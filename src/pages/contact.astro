@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Wire Pegs"
+  description="Get in touch with Wire Pegs. For product purchases and orders, visit Biome. For all other enquiries, contact us directly."
+>
+
+  <section class="py-24 px-6 bg-stone-50">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm font-semibold uppercase tracking-widest text-stone-400 mb-4">Get In Touch</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-stone-800 leading-tight mb-6">Contact Us</h1>
+      <p class="text-xl text-stone-500 leading-relaxed">Have a question about Wire Pegs? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+
+      <div class="bg-stone-800 text-white rounded-2xl p-8 mb-8">
+        <h2 class="text-xl font-bold mb-3">Looking to buy Wire Pegs?</h2>
+        <p class="text-stone-300 leading-relaxed mb-6">Wire Pegs are available exclusively through Biome. Head to their website to browse the full range and place an order.</p>
+        <a href="https://www.biome.com.au/collections/wire-pegs" target="_blank" class="bg-white text-stone-800 font-semibold px-8 py-4 rounded-full hover:bg-stone-100 transition-colors inline-block">Shop at Biome →</a>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-100 p-8 mb-8">
+        <h2 class="text-xl font-bold text-stone-800 mb-6">Send us a message</h2>
+        <form
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          class="space-y-6"
+        >
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-2" for="name">Your name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full border border-stone-200 rounded-xl px-4 py-3 text-stone-800 focus:outline-none focus:border-stone-400 transition-colors"
+              placeholder="Jane Smith"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-2" for="email">Your email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full border border-stone-200 rounded-xl px-4 py-3 text-stone-800 focus:outline-none focus:border-stone-400 transition-colors"
+              placeholder="jane@example.com"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-2" for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="5"
+              class="w-full border border-stone-200 rounded-xl px-4 py-3 text-stone-800 focus:outline-none focus:border-stone-400 transition-colors resize-none"
+              placeholder="Your message here..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-stone-800 text-white font-semibold px-8 py-4 rounded-full hover:bg-stone-700 transition-colors w-full"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <p class="text-center text-stone-400 text-sm">We aim to respond to all enquiries within 1–2 business days.</p>
+
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,76 @@
+---
+import '/src/global.css';
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | Wire Pegs</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-stone-50 text-stone-800 font-sans">
+
+    <!-- HEADER -->
+    <header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold tracking-tight text-stone-800">
+          Wire Pegs
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+          <a href="/why-wire-pegs" class="hover:text-stone-900 transition-colors">Why Wire Pegs</a>
+          <a href="/products" class="hover:text-stone-900 transition-colors">Products</a>
+          <a href="/which-peg" class="hover:text-stone-900 transition-colors">Peg Finder</a>
+          <a href="/blog" class="hover:text-stone-900 transition-colors">Blog</a>
+          <a href="/about" class="hover:text-stone-900 transition-colors">About</a>
+        </nav>
+        
+         <a href="https://www.biome.com.au/collections/wire-pegs"
+          target="_blank"
+          class="bg-stone-800 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-stone-700 transition-colors"
+        >
+          Buy at Biome →
+        </a>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-800 text-stone-300 mt-24">
+      <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-white font-bold text-lg mb-4">Wire Pegs</h3>
+          <p class="text-sm leading-relaxed">The original Australian stainless steel wire clothes peg. Built to last a lifetime.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Pages</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/why-wire-pegs" class="hover:text-white transition-colors">Why Wire Pegs</a></li>
+            <li><a href="/products" class="hover:text-white transition-colors">Products</a></li>
+            <li><a href="/which-peg" class="hover:text-white transition-colors">Peg Finder</a></li>
+            <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="/about" class="hover:text-white transition-colors">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Buy Wire Pegs</h3>
+          <p class="text-sm mb-4">Wire Pegs are available exclusively through Biome — Australia's leading eco store.</p>
+          
+            <a href="https://www.biome.com.au/collections/wire-pegs" target="_blank" class="inline-block bg-white text-stone-800 text-sm font-medium px-4 py-2 rounded-full hover:bg-stone-100 transition-colors">Shop at Biome →</a>
+        </div>
+      </div>
+      <div class="border-t border-stone-700 py-6 text-center text-xs text-stone-500">
+        © 2025 Wire Pegs. All rights reserved.
+      </div>
+    </footer>
+
+  </body>
+</html>
